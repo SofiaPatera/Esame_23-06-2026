@@ -3,12 +3,13 @@ from dataclasses import dataclass
 @dataclass
 class User:
     user_id : str
-    votes_funny : int
-    votes_useful : int
-    votes_cool : int
-    name : str
-    average_stars : float
-    review_count : int
+    votes_funny: int
+    votes_useful: int
+    votes_cool: int
+    name: str
+    average_stars: float
+    review_count: int
+
 
     def __str__(self):
         return f"{self.name} ({self.user_id})"
@@ -18,3 +19,4 @@ class User:
 
     def __hash__(self):
         return hash(self.user_id)
+
